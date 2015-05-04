@@ -26,6 +26,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 453710}
+  - 114: {fileID: 11405720}
   m_Layer: 0
   m_Name: InteractionControllers
   m_TagString: Untagged
@@ -143,6 +144,21 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142528}
   m_Enabled: 1
+--- !u!114 &11405720
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ead178b5dcf0d814cac0f654c8afa15c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionDistance: 0
+  lastSelected: {fileID: 0}
+  playerCamera: {fileID: 2010362}
+  currentAgent: {fileID: 0}
 --- !u!114 &11459454
 MonoBehaviour:
   m_ObjectHideFlags: 1
