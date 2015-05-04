@@ -168,6 +168,10 @@ Material:
         second: 2
       data:
         first:
+          name: _InvFade
+        second: .628782988
+      data:
+        first:
           name: _WaveScale
         second: .0462896563
       data:
@@ -186,10 +190,6 @@ Material:
         first:
           name: _GerstnerIntensity
         second: 1.67142856
-      data:
-        first:
-          name: _InvFade
-        second: .628782988
       data:
         first:
           name: _HeightDisplacement
