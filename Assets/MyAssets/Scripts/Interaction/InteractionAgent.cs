@@ -10,7 +10,7 @@ using System.Collections;
 public class InteractionAgent : MonoBehaviour {
 
 	//keep public
-	public float activationTime;
+	public float activationTime = 5;
 
 	//to hide
 	public bool isSelected = false;
@@ -20,12 +20,13 @@ public class InteractionAgent : MonoBehaviour {
 	public float activationTimer= 0f;
 
 	void Update (){
-		if ( isSelected && !acting){
+
+
+		if ( isSelected && !acting && readyToAct){
 			activationTimer += Time.deltaTime;
 
 			if (activationTimer >= activationTime){
 				acting = true;
-				readyToAct = true;
 				activationTimer = 0f;
 			}
 		}
@@ -62,12 +63,12 @@ public class InteractionAgent : MonoBehaviour {
 		activationTimer = 0;
 		//activate 'acting' flag in the target
 	}
-
-	void MakeActions (){
+	 
+	public virtual void MakeActions (){
 
 		//this is for the 'while elevator is moving do something and stop when elevator stops'
-		Debug.Log (transform.name + " acting");
-
+		Debug.Log (transform.name + " acting from base interaction agent");
+		acting = false;
 		//EndAction ();
 
 	}

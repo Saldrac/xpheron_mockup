@@ -4,7 +4,7 @@ using System.Collections;
 public class StaticPlatform : MonoBehaviour {
 
 	void OnCollisionEnter(Collision other){
-		Debug.Log ("hit on platform");
+		//Debug.Log ("hit on platform");
 		if(other.gameObject.tag == "Player"){
 
 
