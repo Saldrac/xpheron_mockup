@@ -13,24 +13,26 @@ public class InteractionAgent : MonoBehaviour {
 	public float activationTime = 2f;
 
 	//to hide
-	public bool isSelected = false;
-	public bool acting = false;
-	public bool readyToAct = true;
+	bool isSelected = false;
+	bool acting = false;
+	bool readyToAct = true;
 	//to set private
 	public float activationTimer= 0f;
 
 
-	//for temporary use
+	//for temporary use (keep public)
 	public Color stdColor;
 	public Color selectedColor;
-	public Renderer rend;
 
-	void Start (){
+	//set private
+	Renderer rend;
+
+	public virtual void Start (){
 		rend = GetComponent<Renderer>();
 		rend.material.color = stdColor;
 	}
 
-	void Update (){
+	public void Update (){
 
 
 		if ( isSelected && !acting && readyToAct){
@@ -40,9 +42,11 @@ public class InteractionAgent : MonoBehaviour {
 				acting = true;
 				activationTimer = 0f;
 			}
-		} else
+		} 
+/*
+		else
 			rend.material.color = stdColor;
-
+*/
 		if (acting && readyToAct) 
 			InitAction ();
 
@@ -61,6 +65,7 @@ public class InteractionAgent : MonoBehaviour {
 	public void Unselect (){
 		isSelected = false;
 		activationTimer = 0f;
+		rend.material.color = stdColor;
 	}
 
 	public void EndAction(){
@@ -69,7 +74,7 @@ public class InteractionAgent : MonoBehaviour {
 		acting = false;
 	}
 
-	public void InitAction(){
+	public virtual void InitAction(){
 		acting = true;
 		readyToAct = false;
 		activationTimer = 0;
