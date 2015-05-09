@@ -3,7 +3,7 @@ using System.Collections;
 
 public class InteractorTool : MonoBehaviour {
 
-	public float interactionDistance;
+	public float interactionDistance = 0.5f;
 	//public GameObject lastSelected = null;
 	public InteractionAgent lastSelected = null;
 

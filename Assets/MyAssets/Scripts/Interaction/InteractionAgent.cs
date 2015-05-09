@@ -10,7 +10,7 @@ using System.Collections;
 public class InteractionAgent : MonoBehaviour {
 
 	//keep public
-	public float activationTime = 5;
+	public float activationTime = 2f;
 
 	//to hide
 	public bool isSelected = false;
@@ -19,17 +19,29 @@ public class InteractionAgent : MonoBehaviour {
 	//to set private
 	public float activationTimer= 0f;
 
+
+	//for temporary use
+	public Color stdColor;
+	public Color selectedColor;
+	public Renderer rend;
+
+	void Start (){
+		rend = GetComponent<Renderer>();
+		rend.material.color = stdColor;
+	}
+
 	void Update (){
 
 
 		if ( isSelected && !acting && readyToAct){
 			activationTimer += Time.deltaTime;
-
+			rend.material.color = selectedColor;
 			if (activationTimer >= activationTime){
 				acting = true;
 				activationTimer = 0f;
 			}
-		}
+		} else
+			rend.material.color = stdColor;
 
 		if (acting && readyToAct) 
 			InitAction ();

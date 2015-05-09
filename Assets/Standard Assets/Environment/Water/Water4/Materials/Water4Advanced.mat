@@ -168,12 +168,12 @@ Material:
         second: 2
       data:
         first:
-          name: _InvFade
-        second: .628782988
-      data:
-        first:
           name: _WaveScale
         second: .0462896563
+      data:
+        first:
+          name: _InvFade
+        second: .628782988
       data:
         first:
           name: _ReflDistort
