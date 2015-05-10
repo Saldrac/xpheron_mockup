@@ -7,7 +7,7 @@ public class ControllersHolder : MonoBehaviour {
 
 	public void Start (){
 
-		elevatorControllers = gameObject.transform.parent.GetComponentsInChildren<ElevatorController>();
+		elevatorControllers = gameObject.transform.GetComponentsInChildren<ElevatorController>();
 		Debug.Log ("done");
 	}
 
