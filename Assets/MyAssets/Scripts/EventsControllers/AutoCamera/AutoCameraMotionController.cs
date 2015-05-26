@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿//este script es para pruebas. Idealmente esta funcionalidad estara incluida en el sistema de gestion de eventos
+//y el 'cameraAutoTracking' (la funcionalidad que ofrece este script) heredara de la clase base 'evento'
+
+using UnityEngine;
 using System.Collections;
 
 public class AutoCameraMotionController : MonoBehaviour {
@@ -15,11 +18,14 @@ public class AutoCameraMotionController : MonoBehaviour {
 		if (Vector3.Distance (autoCamera.transform.position,autoCameraTarget.transform.position)<stopDistance){
 			//fade out auto camera
 			//fade in fpscontroller camera
+			fadeIn = true;
 		}
 
 		if (fadeIn){
 			//enable fpsController
 			//disable this
+			fpsController.SetActive (true);
+			autoCamera.transform.parent.gameObject.SetActive(false);
 		}
 
 	}
