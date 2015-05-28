@@ -628,7 +628,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112194}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
   m_Name: 
@@ -765,6 +765,7 @@ MonoBehaviour:
   autoCameraTarget: {fileID: 117224}
   fpsController: {fileID: 0}
   stopDistance: .200000003
+  timer: 5
 --- !u!114 &11461676
 MonoBehaviour:
   m_ObjectHideFlags: 1
