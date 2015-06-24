@@ -1,0 +1,44 @@
+Metaparents:
+
+  --EventTrigger--> disparador de eventos. Detecta las condiciones y cuando se cumplen activa el Event que es una
+    clase que agrupa los objetos a activar, desactivar y los EventAgents a activar cuando se activa el trigger.
+    (EVT_* son los hijos de EventTrigger)
+    
+  --EventAgent-->efectos tipo 'evento'. La clase es basicamente una funcion con las acciones a realizar. Distintos
+    hijos tendran distintos copmortamientos (por ejemplo una puerta cerrada tendra su trigger de apertura apagado
+    y esta funcion lo encendera y activara una luz verde para indicar que la puerta ahora reacciona y se abre)
+    
+  --Event-->  agrupa los objetos a activar, desactivar y los EventAgents a activar cuando se activa el trigger
+    (esto ultimo con una serie de llamadas a EventAgent.PerformActions() sobreescrita segun el tipo de evento) 
+    
+    
+    
+General guideline
+
+  
+
+  El prefab 'evento' sera un objeto vacio que incluira uno o varios EventTrigger y UN Event (que agrupara todos
+  sus efectos). Adicionalente, los objetos relacionados con el evento pueden ser de dos tipos:
+    --Objetos estandar, que solo requieren su activacion o desactivacion (referenciados en los vectores 
+      correspondientes y sin necesidades extra mas alla de activarlos o desactivarlos
+   
+    --EventAgents, que requeriran el script EventAgent como parte del objeto para comportamientos especificos. 
+      Recordar que no tienen por que ser objetos 'fisicos'  y podrian ser perfectamente emptys para representar, 
+      por ejemplo, una transmision entrante que agruparia el texto a mostrar, el sonido y las imagenes recibidas.
+    
+    
+  Entendemos pues que un evento podra activarse con uno o varios triggers y estara compuesto por uno o varios
+  efectos (EventAgent y objetos activados/desactivados) agrupados en un unico Event.cs (aunque en principio
+  nada impide añadir varios Event.cs para el caso de que existan distintas condiciones de activacion...
+  eso si, habria que referenciarlos desde el trigger y lanzarlos... a priori si las condiciones de activacion
+  difieren (o el numero de usos) parece mas sensato construir events prefab distintos))
+
+
+  En principio no parece necesario un event manager que se encargue de orquestar que eventos estan disponibles
+  para ser activados en cada momento puesto que cada Event puede encargarse de ello construyendo asi el grafo
+  de eventos
+  
+  
+  Nomenclatura:
+    --EVT_* -->event trigger (hijos de event trigger)
+    --EVA_* --> event agent  (hijos de event agent)

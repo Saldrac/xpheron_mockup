@@ -13,6 +13,8 @@ public class EVT_Area : EventTrigger {
 
 
 	void OnTriggerEnter(Collider col){
+
 		triggeredEvent.LaunchEvent();
+
 	}
 }

@@ -2,8 +2,10 @@
 using System.Collections;
 
 public class Event : MonoBehaviour {
+	//keep public
 	public GameObject [] objectsToEnable;
 	public GameObject [] objectsToDisable;
+	public EventAgent [] eventAgents;
 
 	public bool oneUseOnly = true;
 	public int remainingUses =0;
@@ -17,7 +19,7 @@ public class Event : MonoBehaviour {
 	public void LaunchEvent(){
 		//perform event
 		UpdateObjectsStatus();
-		Debug.Log ("Evento " +transform.name + " lanzado");
+		//Debug.Log ("Evento " +transform.name + " lanzado");
 
 
 
@@ -32,7 +34,7 @@ public class Event : MonoBehaviour {
 
 			FreezeEvent ();
 
-		}
+		}  
 
 		Debug.Log ("Event launched. Remaining uses " + remainingUses);
 	}
@@ -49,10 +51,21 @@ public class Event : MonoBehaviour {
 				objectsToDisable[i].SetActive (false);
 			}
 		}
+
+		if (eventAgents != null){
+			for (int i = 0; i < eventAgents.Length; i++){
+				eventAgents[i].PerformEventActions();
+				//EVA_IncomingTransmission tmp = (EVA_IncomingTransmission)  eventAgents[i];//.PerformEventActions();
+				//tmp.PerformEventActions();
+
+			}
+		}
+
+
 	}
 
 
 	void FreezeEvent (){
-		transform.gameObject.SetActive (false);
+		//transform.gameObject.SetActive (false);
 	}
 }
