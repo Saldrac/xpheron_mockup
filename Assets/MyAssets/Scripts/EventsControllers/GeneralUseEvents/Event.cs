@@ -4,8 +4,20 @@ using System.Collections;
 public class Event : MonoBehaviour {
 	//keep public
 	public GameObject [] objectsToEnable;
+	public float [] enableDelay;
+	public bool [] enableFlags;
+
 	public GameObject [] objectsToDisable;
+	public float [] disbleDelay;
+	public bool [] disableFlags;
+
 	public EventAgent [] eventAgents;
+
+
+
+	public float delaytimer;
+
+	public int totalActions;
 
 	public bool oneUseOnly = true;
 	public int remainingUses =0;
@@ -54,6 +66,8 @@ public class Event : MonoBehaviour {
 
 		if (eventAgents != null){
 			for (int i = 0; i < eventAgents.Length; i++){
+				eventAgents[i].enabled= true;
+
 				eventAgents[i].PerformEventActions();
 				//EVA_IncomingTransmission tmp = (EVA_IncomingTransmission)  eventAgents[i];//.PerformEventActions();
 				//tmp.PerformEventActions();
@@ -67,5 +81,6 @@ public class Event : MonoBehaviour {
 
 	void FreezeEvent (){
 		//transform.gameObject.SetActive (false);
+
 	}
 }

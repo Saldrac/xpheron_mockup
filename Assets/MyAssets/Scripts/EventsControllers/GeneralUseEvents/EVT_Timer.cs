@@ -7,12 +7,18 @@ public class EVT_Timer : EventTrigger {
 
 	//to set private
 	public float activationTimer = 0.0f;
-	
+	public bool triggered = false;
 	// Update is called once per frame
 	void Update () {
+		if (remainingUses<=0 && !permanent)
+			return;
+
+
 
 		activationTimer += Time.deltaTime;
 		if (activationTimer >= timeToActivate){
+			activationTimer =0;
+			remainingUses --;
 			triggeredEvent.LaunchEvent();
 		}
 

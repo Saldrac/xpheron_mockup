@@ -3,6 +3,10 @@ using System.Collections;
 
 public class EventTrigger : MonoBehaviour {
 
+	//keep public
+	public bool permanent;
+	public int remainingUses;
+
 	//to set private
 	public Event triggeredEvent;
 
@@ -13,6 +17,6 @@ public class EventTrigger : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		triggeredEvent.LaunchEvent();
+		//triggeredEvent.LaunchEvent();
 	}
 }

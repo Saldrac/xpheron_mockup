@@ -2,14 +2,13 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: EthanWhite
-  m_Shader: {fileID: 11, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _LIGHTMAPPING_STATIC_LIGHTMAPS _NORMALMAP _UVPRIM_UV1 _UVSEC_UV1
-  m_LightmapFlags: 0
   m_CustomRenderQueue: -1
   m_SavedProperties:
     serializedVersion: 2
@@ -37,14 +36,14 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _ParallaxMap
+          name: _EmissionMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _EmissionMap
+          name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -79,13 +78,6 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _OcclusionMap
-        second:
-          m_Texture: {fileID: 2800000, guid: 4e2f32e9a1fefc24092337ae061f3dbc, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _Cube
         second:
           m_Texture: {fileID: 8900000, guid: 6c5668bb9f9669342bfdd3eaddebb56b, type: 2}
@@ -93,16 +85,12 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Illum
+          name: _OcclusionMap
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 4e2f32e9a1fefc24092337ae061f3dbc, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
-      data:
-        first:
-          name: _Cutoff
-        second: .5
       data:
         first:
           name: _Shininess
@@ -111,6 +99,10 @@ Material:
         first:
           name: _AlphaTestRef
         second: .5
+      data:
+        first:
+          name: _Lightmapping
+        second: 0
       data:
         first:
           name: _SrcBlend
@@ -123,10 +115,6 @@ Material:
         first:
           name: _Parallax
         second: .0199999996
-      data:
-        first:
-          name: _Lightmapping
-        second: 0
       data:
         first:
           name: _ZWrite
@@ -179,15 +167,11 @@ Material:
       data:
         first:
           name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+        second: {r: 0, g: 0, b: 0, a: .99999994}
       data:
         first:
           name: _Color
-        second: {r: .154411793, g: .154411793, b: .154411793, a: 1}
-      data:
-        first:
-          name: _SpecColor
-        second: {r: .0980392173, g: .0980392173, b: .0980392173, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _SpecularColor
@@ -200,6 +184,10 @@ Material:
         first:
           name: _EmissionColorWithMapUI
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: .0980392173, g: .0980392173, b: .0980392173, a: 1}
       data:
         first:
           name: _ReflectColor

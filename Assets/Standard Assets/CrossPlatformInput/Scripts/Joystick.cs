@@ -24,14 +24,10 @@ namespace UnityStandardAssets.CrossPlatformInput
 		bool m_UseY; // Toggle for using the Y axis
 		CrossPlatformInputManager.VirtualAxis m_HorizontalVirtualAxis; // Reference to the joystick in the cross platform input
 		CrossPlatformInputManager.VirtualAxis m_VerticalVirtualAxis; // Reference to the joystick in the cross platform input
-		
 
 		void OnEnable()
 		{
-			//AUTOFIX
-			//Before it was
-			//m_StartPos = transform.position;
-			m_StartPos = new Vector3 (60, 60, 0);
+			m_StartPos = transform.position;
 			CreateVirtualAxes();
 		}
 
@@ -95,7 +91,6 @@ namespace UnityStandardAssets.CrossPlatformInput
 
 		public void OnPointerUp(PointerEventData data)
 		{
-		
 			transform.position = m_StartPos;
 			UpdateVirtualAxes(m_StartPos);
 		}

@@ -13,8 +13,10 @@ public class EVT_Area : EventTrigger {
 
 
 	void OnTriggerEnter(Collider col){
-
-		triggeredEvent.LaunchEvent();
+		if (permanent || remainingUses > 0){
+			triggeredEvent.LaunchEvent();
+			remainingUses --;
+		}
 
 	}
 }
