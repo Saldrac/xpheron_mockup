@@ -4,12 +4,8 @@ using System.Collections;
 public class Event : MonoBehaviour {
 	//keep public
 	public GameObject [] objectsToEnable;
-	public float [] enableDelay;
-	public bool [] enableFlags;
 
 	public GameObject [] objectsToDisable;
-	public float [] disbleDelay;
-	public bool [] disableFlags;
 
 	public EventAgent [] eventAgents;
 

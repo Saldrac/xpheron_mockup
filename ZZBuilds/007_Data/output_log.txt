@@ -17,12 +17,16 @@ Platform assembly: D:\Intercambio\proyectos\TheXpheronProject\SharedArea\xpheron
 Loading D:\Intercambio\proyectos\TheXpheronProject\SharedArea\xpheron_mockup\ZZBuilds\007_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
 Platform assembly: D:\Intercambio\proyectos\TheXpheronProject\SharedArea\xpheron_mockup\ZZBuilds\007_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading D:\Intercambio\proyectos\TheXpheronProject\SharedArea\xpheron_mockup\ZZBuilds\007_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.052 seconds
+- Completed reload, in  0.260 seconds
 <RI> Initializing input.
 <RI> Input initialized.
-desktop: 1680x1050 60Hz; virtual: 1680x1050 at 0,0
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initialized touch support.
 Platform assembly: D:\Intercambio\proyectos\TheXpheronProject\SharedArea\xpheron_mockup\ZZBuilds\007_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Intercambio\proyectos\TheXpheronProject\SharedArea\xpheron_mockup\ZZBuilds\007_Data\Managed\System.dll (this message is harmless)
+Unable initialize VR. Please make sure the runtime is installed and running and a VR display is attached.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1644 -> priority: 1 
+  Thread -> id: 1e78 -> priority: 1 
