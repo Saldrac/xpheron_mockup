@@ -6,7 +6,7 @@ public class EVA_DeactivateHolodeck : EventAgent {
 	public Animator holodeckAnimator;
 	public GameObject playerHolder;
 	public GameObject playerController;
-	//public GameObject virtualScene;
+	public DustManager dustManager;
 
 
 	//set private
@@ -19,5 +19,6 @@ public class EVA_DeactivateHolodeck : EventAgent {
 		holodeckAnimator.SetBool ("Activate",false);
 		holodeckAnimator.SetBool ("Deactivate",true);
 		playerController.transform.parent = playerHolder.transform.parent;
+		dustManager.enabled = false;
 	}
 }

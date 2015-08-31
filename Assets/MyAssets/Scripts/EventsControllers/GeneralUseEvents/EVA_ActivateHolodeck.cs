@@ -8,6 +8,7 @@ public class EVA_ActivateHolodeck : EventAgent {
 	public Animator lightEffectAnimation;
 	public DustManager dustManager;
 	public GameObject platformsSet; //to hide until animate
+	public LensFlare lensFlare;
 	//to set private
 	public float generalTimer;
 	public float platformsTime =3;
@@ -33,6 +34,7 @@ public class EVA_ActivateHolodeck : EventAgent {
 				dustManager.enabled = true;
 				deslumbrarHecho = true;
 				lightEffectAnimation.SetBool ("Deslumbrar",true);
+				lensFlare.enabled = true;
 			}
 		}
 
