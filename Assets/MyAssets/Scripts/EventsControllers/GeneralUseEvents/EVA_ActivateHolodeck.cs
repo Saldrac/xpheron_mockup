@@ -6,7 +6,7 @@ public class EVA_ActivateHolodeck : EventAgent {
 	public Animator holodeckAnimator;
 	public Animator platformsAnimator;
 	public Animator lightEffectAnimation;
-
+	public DustManager dustManager;
 	public GameObject platformsSet; //to hide until animate
 	//to set private
 	public float generalTimer;
@@ -30,6 +30,7 @@ public class EVA_ActivateHolodeck : EventAgent {
 
 		if (!deslumbrarHecho){
 			if (generalTimer>= deslumbrarTime){
+				dustManager.enabled = true;
 				deslumbrarHecho = true;
 				lightEffectAnimation.SetBool ("Deslumbrar",true);
 			}
