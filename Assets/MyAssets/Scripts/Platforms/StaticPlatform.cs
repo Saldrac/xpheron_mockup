@@ -18,22 +18,4 @@ public class StaticPlatform : MonoBehaviour {
 			other.transform.parent = null;
 		}
 	}
-
-
-
-	void OnTriggerEnter(Collider other){
-		//Debug.Log ("hit on platform");
-		if(other.gameObject.tag == "Player"){
-			
-			
-			other.transform.parent = this.transform;
-		}
-		
-	}
-	
-	void OnTriggerExit(Collider other){
-		if(other.gameObject.tag == "Player"){
-			other.transform.parent = null;
-		}
-	}
 }

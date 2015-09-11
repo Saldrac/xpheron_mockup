@@ -15,7 +15,7 @@ public class ElevatorController : InteractionAgent {
 	public override void Start (){
 		base.Start ();
 		controllersHolder = transform.parent.parent.parent.GetComponent <ControllersHolder>();
-		//Debug.Log ("Done");
+		Debug.Log ("Done");
 	}
 
 	//make one single displacement step and check if on target

@@ -6,4 +6,4 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MyAssets/Scenes/Scene01_EsferaPersonal.unity
+    path: Assets/MyAssets/ZZTempScenes/Scene_Race/scene_race.unity
