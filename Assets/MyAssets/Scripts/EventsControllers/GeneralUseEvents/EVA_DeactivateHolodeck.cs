@@ -16,8 +16,8 @@ public class EVA_DeactivateHolodeck : EventAgent {
 	public override void PerformEventActions ()
 	{
 		desactivando = true;
-		holodeckAnimator.SetBool ("Activate",false);
-		holodeckAnimator.SetBool ("Deactivate",true);
+		holodeckAnimator.SetBool ("ActivarHolo",false);
+		holodeckAnimator.SetBool ("DesactivarHolo",true);
 		playerController.transform.parent = playerHolder.transform.parent;
 		dustManager.enabled = false;
 	}

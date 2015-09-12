@@ -44,8 +44,8 @@ public class EVA_ActivateHolodeck : EventAgent {
 
 	public override void PerformEventActions ()
 	{
-		holodeckAnimator.SetBool ("Activate",true);
-		holodeckAnimator.SetBool ("Deactivate",false);
+		holodeckAnimator.SetBool ("ActivarHolo",true);
+		holodeckAnimator.SetBool ("DesactivarHolo",false);
 		platformsSet.SetActive(false);
 		waitingForPlatforms = true;
 
