@@ -7,7 +7,7 @@ public class WeaponsManager : MonoBehaviour {
 	public int armaEquipada;
 
 
-	bool laserActive = false;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -19,12 +19,6 @@ public class WeaponsManager : MonoBehaviour {
 
 
 
-		if (Input.GetMouseButtonDown(1)){
-			Debug.Log("Pressed right click.");
-			laserActive = !laserActive;
-			armas[armaEquipada].GetComponent<Arma>().laserReference.SetActive(laserActive);
-
-		}
 
 	}
 }
