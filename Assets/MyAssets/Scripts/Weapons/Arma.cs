@@ -7,6 +7,7 @@ public class Arma : MonoBehaviour {
 	public int municion;
 	public Proyectil proyectil;
 	public Transform origenProyectil;
+	public GameObject laserReference;
 
 
 
