@@ -2,14 +2,12 @@
 using System.Collections;
 
 public class Proyectil : MonoBehaviour {
+	public float speed = 1.0f;
+	public float lifeTime = 10;
+	void Update (){
+		transform.Translate (Vector3.forward * Time.deltaTime * speed);
+		Destroy (gameObject, lifeTime);
 
-	// Use this for initialization
-	void Start () {
-	
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }

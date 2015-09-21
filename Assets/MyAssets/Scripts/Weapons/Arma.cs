@@ -5,11 +5,10 @@ public class Arma : MonoBehaviour {
 
 	public int maxMunicion;
 	public int municion;
-	public Proyectil proyectil;
-	public Transform origenProyectil;
+
 	public GameObject laserReference;
 
-	bool laserActive = false;
+	protected bool laserActive = false;
 
 
 	public virtual void Update (){
@@ -26,18 +25,21 @@ public class Arma : MonoBehaviour {
 		}
 	}
 
-	public void Disparar (){
+	public virtual void Disparar (){
+		Debug.Log ("disparo desde arma");
+		/*
 		if (municion > 0 ){
 			GameObject p = Instantiate (proyectil, origenProyectil.position, origenProyectil.rotation) as GameObject;
 			municion --;
 		}
-
+*/
 	}
 
-	public void Recargar (int cantidad){
+	public void Recargar (int cantidad){/*
 		municion += cantidad;
 		if (municion >= maxMunicion)
 			municion = maxMunicion;
+			*/
 	}
 
 	public void LaserAction(){

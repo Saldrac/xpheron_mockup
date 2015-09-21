@@ -16,12 +16,15 @@ public class RayWeapon : Arma {
 		//Debug.Log ("on ray update");
 //		Debug.Log (Input.GetMouseButtonDown(0));
 
-		if (Input.GetMouseButton(0) && municion > 0 || true){
+		if (Input.GetMouseButton(0) && municion > 0 && laserActive){
+			Debug.Log ("emmiter active");
 			target.transform.position = laserHitPoint.transform.position;
 			emitter.SetActive (true);
-		} else
+			//laserReference.SetActive (false);
+		} else{
 			emitter.SetActive (false);
-
+			//laserReference.SetActive (laserActive);
+		}
 
 /*
 		RaycastHit hit;
@@ -37,6 +40,9 @@ public class RayWeapon : Arma {
 			//currentAgent = null;
 		}
 */
+	}
+
+	public override void Disparar (){
 	}
 
 }
